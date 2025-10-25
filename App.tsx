@@ -74,7 +74,7 @@ const App: React.FC = () => {
             },
         });
         
-        const imagePart = response.candidates?.[0]?.content.parts.find(p => p.inlineData);
+        const imagePart = response.candidates?.[0]?.content?.parts.find(p => p.inlineData);
 
         if (!imagePart) {
             throw new Error("API did not return an image. The model may have refused the prompt.");
